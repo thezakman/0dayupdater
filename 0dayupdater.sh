@@ -11,6 +11,7 @@
 # . Add a option menu
 # . Clean
 
+# Gob - "I've made a huge mistake!"
 
 clear
 echo
@@ -23,7 +24,7 @@ verde='\033[1;32m' # Light Green
 
 SC='\033[0m' # No Color
 
-
+clear
 echo -e "\n${verde} [*] Welcome back you lazy-ass motherfucker!"
 
 echo -e "${amarelo}"
@@ -46,7 +47,7 @@ echo -e "        |/__\|/____\|/____\|/____________________\|   ";
 
 echo ""; 
 
-echo -e "${SC}          ${azul}TheZakMan ${SC}- ${azul}22, Feb 2015 ${SC}| ${azul}Version: ${amarelo}0.6b ";
+echo -e "${SC}          ${azul}TheZakMan ${SC}- ${azul}24, Jun 2015 ${SC}| ${azul}Version: ${amarelo}0.9b ";
 
 sleep 2
 
@@ -106,17 +107,34 @@ else
      echo -e "${azul}As you wish, my Lord!"	
 fi
 
+
 # Update Flash
 
-echo -e "\n";
-echo -e "\n${verde}▓▓▓▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒▓▓▓ "			
-echo -e "▓▓▓▒▒            [*] Updating Adobe Flash           ░▒▒▓▓▓ "
-echo -e "▓▓▓▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒▓▓▓${SC} "
+echo -e "${SC}---------------------------------${verde}"
+read -p "Update Adobe Flash? [Y/n] " resposta
+#if test "$resposta" = "Y"
+if [[ $resposta == "y" || $resposta == "Y" || $resposta == "s" || $resposta == "S" || $resposta == "yes" || $resposta == "Yes" || $resposta == "sim" || $resposta == "Sim" ]]
 
-echo -e "_______________________________________________________________${azul}"
-apt-get -y install flashplugin-nonfree
-update-flashplugin-nonfree --status
-update-flashplugin-nonfree --install
+
+then
+
+    
+
+    echo -e "\n";
+    echo -e "\n${verde}▓▓▓▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒▓▓▓ "			
+    echo -e "▓▓▓▒▒            [*] Updating Adobe Flash           ░▒▒▓▓▓ "
+    echo -e "▓▓▓▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒▓▓▓${SC} "
+
+    echo -e "_______________________________________________________________${azul}"
+    apt-get -y install flashplugin-nonfree
+    update-flashplugin-nonfree --status
+    update-flashplugin-nonfree --install
+else
+     echo -e "${azul}Okay boss!"	
+     echo -e "${SC}---------------------------------${verde}"
+fi
+
+
 
 
 echo -e "\n";
@@ -128,8 +146,6 @@ echo -e "_______________________________________________________________${azul}"
 
 # optional update for discover script ( in case you have installed :P )
 bash /opt/discover/update.sh
-
-
 
 echo "_______________________________________________________________"
 echo -e "${verde}_  _ ____ _   _    ____ _  _ _ ____ ____   /";
