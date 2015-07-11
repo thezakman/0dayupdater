@@ -2,7 +2,7 @@
 # Script to use when i am lazy
 # update my most used tools to the last version
 
-# By TheZakMan  25/06/2015 03:44:17 31/05/2015 15:02:00        
+# By TheZakMan  11/07/2015 03:07:07         
 # Suggestions or comments can be PM'd to @TheZakMan
 
 # [TODO:]
