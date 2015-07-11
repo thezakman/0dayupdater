@@ -30,7 +30,7 @@ SC='\033[0m' # No Color
 
 trap 'echo -ne "\033]0;$BASH_COMMAND\007"' DEBUG # Debugger
 
-CACA_DRIVER=ncurses mplayer -vo caca -msglevel all=0 /root/My\ Scripts/0dayupdater/intro.gif 
+CACA_DRIVER=ncurses mplayer -vo caca -msglevel all=0 intro.gif 
 
 
 clear
